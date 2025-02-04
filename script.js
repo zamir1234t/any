@@ -10,32 +10,41 @@
 // }
 
 
-let currentInput = '' 
-function appendNumber(person) {
-    currentInput += person
-    document.getElementById('result').value = currentInput
-}
+// let input =''
+// function appendNumber(parametr) {
+//     input +=parametr;
+//     document.getElementById('result').value = input
+// }
 
-function appendOperator(Number) {
-    currentInput += ' ' + Number + ' '
-    document.getElementById('result').value=currentInput
-}
+// function appendOperator(stic) {
+//     input += ''+stic+'';
+//     document.getElementById('result').value =input
+// }
 
-function learScreen() {
-    currentInput = ' '
-    document.getElementById('result').value= ' '
-}
+// function clearScreen() {
+//     input = ''
+//     document.getElementById('result').value =''
+// }
 
-function clearInterval() {
-    currentInput =currentInput.slice(0,-1)
-    document.getElementById('result').value =currentInput
-}
+// function clearInterval() {
+//     input =input.slice(0,-1)
+//     document.getElementById('result').value = input
+// }
 
-function calculate() {
-    try{
-        currentInput = eval(currentInput).toString()
-        document.getElementById('result').value = currentInput
-    }catch{
-        document.getElementById('result').value ='ты на приколе?'
-    }
-}
+// function calculate() {
+//     try{
+//         input =eval(input).toString()
+//         document.getElementById('result').value = input
+//     }catch{
+//         document.getAnimations('result').value ='sdc'
+//     }
+// }
+
+const input =document.getElementById('input')
+const output =document.getElementById('output')
+
+input.addEventListener("input", function () {
+    output.textContent = input.value
+})
+
+   
